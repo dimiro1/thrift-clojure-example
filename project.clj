@@ -14,7 +14,7 @@
 
 (defproject thrift-example "0.1.0-SNAPSHOT"
   :description "Example of Implementation of the Thrift Servlet with Clojure Ring/compojure"
-  :url "https://github.com/dimiro1/"
+  :url "https://github.com/dimiro1/thrift-clojure-example"
   :license {:name "ISC License"
             :url "http://www.isc.org/downloads/software-support-policy/isc-license/"}
   :dependencies [[org.clojure/clojure "1.7.0"]
