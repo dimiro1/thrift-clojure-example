@@ -7,6 +7,10 @@ Implementation of the Thrift Servlet with Clojure Ring/compojure.
 
 Because I can not run a Java Servlet directly with Ring and I needed to call Thrift services throught HTTP.
 
+## Running the example
+
+`$ lein run`
+
 ## License
 
 Copyright (c) 2015, Claudemiro Alves Feitosa Neto
