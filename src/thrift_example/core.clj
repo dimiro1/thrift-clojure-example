@@ -20,7 +20,8 @@
             [compojure.route :as route]
             [ring.middleware.defaults :refer [wrap-defaults api-defaults]]
             [ring.middleware.reload :as reload]
-            [org.httpkit.server :as httpkit]))
+            [org.httpkit.server :as httpkit])
+  (:gen-class))
 
 
 (defn THRIFT
