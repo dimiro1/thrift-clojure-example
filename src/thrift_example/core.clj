@@ -20,7 +20,7 @@
             [compojure.route :as route]
             [ring.middleware.defaults :refer [wrap-defaults api-defaults]]
             [ring.middleware.reload :as reload]
-            [org.httpkit.server :as httpkit])
+            [ring.adapter.jetty :refer :all])
   (:gen-class))
 
 
@@ -55,7 +55,7 @@
 (def client (Calculator$Client. protocol))
 
 (defroutes app-routes
-  (GET "/" [] "Hello World 2")
+  (GET "/" [] "Hello World")
   (THRIFT "/calc/" (TCompactProtocol$Factory.) processor)
   (GET "/sum/:n1/:n2" [n1 n2]
     (try
@@ -69,5 +69,5 @@
   (let [handler (reload/wrap-reload #'app-routes)
         port port]
     (println (str "Running server on port " port " :)"))
-    (httpkit/run-server handler {:port port})))
+    (run-jetty handler {:port port})))
 

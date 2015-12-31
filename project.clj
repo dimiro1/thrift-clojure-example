@@ -21,7 +21,8 @@
                  [compojure "1.4.0"]
                  [ring "1.4.0"]
                  [ring/ring-defaults "0.1.5"]
-                 [http-kit "2.1.21-alpha2"]
                  [org.apache.thrift/libthrift "0.9.3"]]
   :java-source-paths ["src/java"]
-  :main thrift-example.core)
+  :main ^:skip-aot thrift-example.core
+  :target-path "target/%s"
+  :profiles {:uberjar {:aot :all}})
